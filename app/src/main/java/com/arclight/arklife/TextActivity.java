@@ -160,8 +160,10 @@ public class TextActivity extends Activity {
                 String botRegion = null;
                 JSONObject lexConfig;
                 try {
+                    // AWSConfiguration.optJsonObject(String name) takes 1st key in main which is
+                    // config (e.g. "Default")
                     lexConfig = AWSMobileClient.getInstance().getConfiguration().optJsonObject("Lex");
-                    lexConfig = lexConfig.getJSONObject(lexConfig.keys().next());
+                    // lexConfig = lexConfig.getJSONObject(lexConfig.keys().next());
 
                     botName = lexConfig.getString("Name");
                     botAlias = lexConfig.getString("Alias");

@@ -33,3 +33,7 @@ dist/
 node_modules/
 aws-exports.js
 awsconfiguration.json
+
+#build files
+/.gradle/
+/.idea/
