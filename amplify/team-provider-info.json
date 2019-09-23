@@ -1,0 +1,14 @@
+{
+    "production": {
+        "awscloudformation": {
+            "AuthRoleName": "arklife-production-20190923140803-authRole",
+            "UnauthRoleArn": "arn:aws:iam::781234345806:role/arklife-production-20190923140803-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::781234345806:role/arklife-production-20190923140803-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "arklife-production-20190923140803-deployment",
+            "UnauthRoleName": "arklife-production-20190923140803-unauthRole",
+            "StackName": "arklife-production-20190923140803",
+            "StackId": "arn:aws:cloudformation:us-east-1:781234345806:stack/arklife-production-20190923140803/81aae890-ddc8-11e9-84eb-0a62acea77ae"
+        }
+    }
+}
