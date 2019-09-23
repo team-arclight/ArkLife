@@ -25,6 +25,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
     //Base SDK
     implementation 'com.amazonaws:aws-android-sdk-core:2.15.+'
     //AppSync SDK

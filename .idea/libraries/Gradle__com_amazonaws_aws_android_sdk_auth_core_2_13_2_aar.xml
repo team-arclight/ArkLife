@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.amazonaws:aws-android-sdk-auth-core:2.13.2@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ae1f3d8f985cfaeb0272a6570f223d8c/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ae1f3d8f985cfaeb0272a6570f223d8c/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3875a8aa2bb77d2e667b7285d6aa97eb/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3875a8aa2bb77d2e667b7285d6aa97eb/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
