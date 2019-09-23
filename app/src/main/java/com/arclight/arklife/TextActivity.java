@@ -211,7 +211,7 @@ public class TextActivity extends Activity {
                 addMessage(new TextMessage(text, "tx", getCurrentTimeStamp()));
                 convContinuation.continueWithTextInForTextOut(text);
             } catch (NullPointerException ne) {
-                // Proceed
+                startNewConversation();
             }
         }
         clearTextInput();
@@ -287,7 +287,16 @@ public class TextActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            String hardCodeInfo = "Calories: 600 kcal\nOther nutritional information:\n" +
+            String hardCodeInfo = "----------------------------\n" +
+                    "|                                          |\n" +
+                    "|                                          |\n" +
+                    "|                                          |\n" +
+                    "|                                          |\n" +
+                    "|                                          |\n" +
+                    "|                                          |\n" +
+                    "|                                          |\n"
+                    + "----------------------------\n\n" +
+                    "Calories: 600 kcal\nOther nutritional information:\n" +
                     "Modifications to exercise required:";
             addMessage(new TextMessage(hardCodeInfo, "rx", getCurrentTimeStamp()));
 //            Bundle extras = data.getExtras();
