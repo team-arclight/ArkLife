@@ -2,23 +2,25 @@ package com.arclight.arklife;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-
-import com.amazonaws.mobile.client.AWSMobileClient;
-import com.amazonaws.mobile.client.AWSStartupHandler;
-import com.amazonaws.mobile.client.AWSStartupResult;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView helloworld;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        helloworld = findViewById(R.id.helloworld);
 
-        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
+        helloworld.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onComplete(AWSStartupResult awsStartupResult) {
-                Log.d("MainActivity", "AWSMobileClient is instantiated and you are connected to AWS!");
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TextActivity.class));
             }
-        }).execute();
+        });
     }
 }

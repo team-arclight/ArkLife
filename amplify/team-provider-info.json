@@ -9,6 +9,11 @@
             "UnauthRoleName": "arklife-production-20190923140803-unauthRole",
             "StackName": "arklife-production-20190923140803",
             "StackId": "arn:aws:cloudformation:us-east-1:781234345806:stack/arklife-production-20190923140803/81aae890-ddc8-11e9-84eb-0a62acea77ae"
+        },
+        "categories": {
+            "auth": {
+                "cognito63279a83": {}
+            }
         }
     }
 }

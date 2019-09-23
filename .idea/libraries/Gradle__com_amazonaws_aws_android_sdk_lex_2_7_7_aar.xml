@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-android-sdk-lex:2.7.7@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b79d9286d68fce71632972fa0d4794ef/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b79d9286d68fce71632972fa0d4794ef/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-lex/2.7.7/2e22bb7cb1a47d78f5da7f73f61db45d86ead923/aws-android-sdk-lex-2.7.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

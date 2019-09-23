@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ArkLife</string>
+    <string name="screen_options_main_message">Amazon Lex</string>
 </resources>
