@@ -60,7 +60,7 @@
                     android:src="@drawable/instagram" />
 
                 <Button
-                    android:id="@+id/button1"
+                    android:id="@+id/btnFood"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="3dp"
@@ -106,7 +106,7 @@
                     android:src="@drawable/jogging" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btnExercise"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="3dp"
@@ -151,7 +151,7 @@
                     android:src="@drawable/calendar" />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/btnSchedule"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="3dp"
@@ -195,7 +195,7 @@
                     android:src="@drawable/friends" />
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/btnCommunity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="3dp"
@@ -240,7 +240,7 @@
                     android:src="@drawable/medal" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/btnMilestones"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="3dp"
@@ -284,7 +284,7 @@
                     android:src="@drawable/money" />
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/btnRewards"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="3dp"

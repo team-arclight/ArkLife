@@ -20,23 +20,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button button1 = findViewById(R.id.button1);
+        Button btnFood = findViewById(R.id.btnFood);
         imageView = findViewById(R.id.imageViewid);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        btnFood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                Intent intent = new Intent(MainActivity.this, TextActivity.class);
+//                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivity(intent);
 
             }
         });
-        Button button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        Button btnExercise = findViewById(R.id.btnExercise);
+        btnExercise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), com.arclight.arklife.button2.class);
-                startIntent.putExtra("com.example.androidgridlayout.SOME", "HELL");
+                Intent startIntent = new Intent(getApplicationContext(), ExerciseActivity.class);
                 startActivity(startIntent);
             }
         });
@@ -49,7 +49,5 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageBitmap(bitmap);
 
     }
-
-
 
 }

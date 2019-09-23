@@ -1,22 +1,9 @@
-/*
- * Copyright 2016-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License").
- * You may not use this file except in compliance with the License.
- * A copy of the License is located at
- *
- *  http://aws.amazon.com/apache2.0
- *
- * or in the "license" file accompanying this file. This file is distributed
- * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- * express or implied. See the License for the specific language governing
- * permissions and limitations under the License.
- */
-
 package com.arclight.arklife;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -44,6 +31,7 @@ import java.util.Date;
 
 public class TextActivity extends Activity {
     private static final String TAG = "TextActivity";
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
     /**
      * Implementing {@link AudioPlaybackListener}.
      */
@@ -134,6 +122,7 @@ public class TextActivity extends Activity {
         userTextInput.setEnabled(false);
 
         initializeLexSDK();
+        dispatchTakePictureIntent();
         startNewConversation();
     }
 
@@ -217,9 +206,13 @@ public class TextActivity extends Activity {
             lexInteractionClient.textInForTextOut(text, null);
             inConversation = true;
         } else {
-            Log.d(TAG, " -- Responding with text: " + text);
-            addMessage(new TextMessage(text, "tx", getCurrentTimeStamp()));
-            convContinuation.continueWithTextInForTextOut(text);
+            try {
+                Log.d(TAG, " -- Responding with text: " + text);
+                addMessage(new TextMessage(text, "tx", getCurrentTimeStamp()));
+                convContinuation.continueWithTextInForTextOut(text);
+            } catch (NullPointerException ne) {
+                // Proceed
+            }
         }
         clearTextInput();
     }
@@ -282,5 +275,24 @@ public class TextActivity extends Activity {
     private void showToast(final String message) {
         Toast.makeText(this.getApplicationContext(), message, Toast.LENGTH_LONG).show();
         Log.d(TAG, message);
+    }
+
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            String hardCodeInfo = "Calories: 600 kcal\nOther nutritional information:\n" +
+                    "Modifications to exercise required:";
+            addMessage(new TextMessage(hardCodeInfo, "rx", getCurrentTimeStamp()));
+//            Bundle extras = data.getExtras();
+//            Bitmap imageBitmap = (Bitmap) extras.get("data");
+//            imageView.setImageBitmap(imageBitmap);
+        }
     }
 }
